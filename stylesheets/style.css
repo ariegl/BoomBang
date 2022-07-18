@@ -1,0 +1,438 @@
+@font-face {
+  font-family: "vagrounded";
+  src: url("../fonts/VAG Rounded Regular.ttf");
+}
+/* line 8, ../sass/style.scss */
+body {
+  background: black;
+  font-family: 'vagrounded';
+}
+
+/* line 13, ../sass/style.scss */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 19, ../sass/style.scss */
+.container {
+  width: 900px;
+  height: 640px;
+  background-color: black;
+  background-image: url("../img/beluga.png");
+  background-size: cover;
+}
+
+/* line 27, ../sass/style.scss */
+.container-ficha {
+  width: 220px;
+  height: 330px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background: #ffcc01;
+  border-radius: 8px;
+}
+
+/* line 36, ../sass/style.scss */
+.container-ficha-header {
+  width: 100%;
+  height: 60px;
+}
+
+/* line 41, ../sass/style.scss */
+.container-ficha-main {
+  width: 100%;
+  height: 120px;
+}
+
+/* line 46, ../sass/style.scss */
+.container-ficha-actions {
+  width: 100%;
+  height: 150px;
+  background: pink;
+}
+
+/* line 52, ../sass/style.scss */
+.title-ficha {
+  width: 85%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 28px;
+  background: #f89200;
+  padding: 5px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: default;
+}
+
+/* line 64, ../sass/style.scss */
+.txtDefault {
+  text-decoration: none;
+  cursor: default;
+}
+
+/* line 69, ../sass/style.scss */
+.container-ficha-main-cloud {
+  width: 50%;
+  height: 100%;
+}
+
+/* line 74, ../sass/style.scss */
+.container-ficha-main-character {
+  width: 50%;
+  height: 100%;
+}
+
+/* line 79, ../sass/style.scss */
+.container-picture {
+  width: 94px;
+  height: 94px;
+  border-radius: 360px;
+  background: #ffea75;
+  background: radial-gradient(circle, #ffea75 46%, #febc01 60%, #f28200 75%);
+}
+
+/* line 87, ../sass/style.scss */
+.container-cloud {
+  width: 90%;
+  height: 60%;
+  background: white;
+  margin: 3px 6px 3px 6px;
+  border-radius: 5px;
+}
+
+/* line 95, ../sass/style.scss */
+.txtCloud {
+  padding: 8px 4px;
+  font-family: 'vagrounded';
+  font-size: 11px;
+  font-weight: bold;
+  color: #007eff;
+}
+
+/* line 103, ../sass/style.scss */
+.container-age {
+  width: 90%;
+  height: 40%;
+}
+
+/* line 108, ../sass/style.scss */
+.img-ficha {
+  max-height: 90%;
+}
+
+/* line 112, ../sass/style.scss */
+.txtPetalo {
+  font-weight: bold;
+  font-size: 10px;
+  color: black;
+}
+
+/* line 118, ../sass/style.scss */
+.container-ficha-actions-header {
+  width: 100%;
+  height: 23%;
+  background: white;
+}
+
+/* line 124, ../sass/style.scss */
+.container-ficha-actions-body {
+  width: 100%;
+  height: 77%;
+  background: lime;
+}
+
+/*PETALOS EDAD PERSONAJE*/
+/* calculate the diagonal */
+/* consider equilateral triangle*/
+/*number of petals */
+/* line 169, ../sass/style.scss */
+body {
+  background: #bbb;
+}
+
+/* line 173, ../sass/style.scss */
+.container-flower {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 178, ../sass/style.scss */
+.wrapper {
+  position: relative;
+  width: 3em;
+  height: 3em;
+  border-radius: 0%;
+  margin: 0 auto;
+}
+
+/* line 186, ../sass/style.scss */
+.core {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 1em;
+  height: 1em;
+  background: radial-gradient(ellipse at center, #f7bd00 0%, #f7bd00 52%, #f79800 67%, #f79800 100%);
+  border-radius: 50%;
+  cursor: default;
+  overflow: hidden;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 1;
+}
+/* line 199, ../sass/style.scss */
+.core:hover {
+  opacity: 1;
+}
+
+/* line 204, ../sass/style.scss */
+.petal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3em;
+  height: 3em;
+}
+
+/* line 221, ../sass/style.scss */
+.petal {
+  position: absolute;
+  width: 0.57735em;
+  height: 0.5em;
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 75%, #ffffff 100%);
+  border-radius: 0 50% 50% 50%;
+  box-shadow: -2px -2px 20px rgba(255, 255, 255, 0.5) inset, 0px 0px 2px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  cursor: default;
+  overflow: hidden;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 1;
+  /*&:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $petal-col;
+    box-shadow: -2px -2px 20px rgba(255,255,255,0.5) inset;
+    
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    
+    
+    &:hover {
+      opacity: 0.0;
+    }
+  }*/
+}
+/* line 236, ../sass/style.scss */
+.petal:hover {
+  opacity: 1;
+}
+/* line 262, ../sass/style.scss */
+.petal:nth-child(1) {
+  animation: ani1 1000s ease-in-out infinite;
+  animation-delay: 0s;
+  transform: translateY(1.25em) translateX(2.21132em) rotate(-30deg) skewX(30deg) scale(1);
+}
+/* line 262, ../sass/style.scss */
+.petal:nth-child(2) {
+  animation: ani2 1000s ease-in-out infinite;
+  animation-delay: 83.33333s;
+  transform: translateY(1.75em) translateX(2.07735em) rotate(0deg) skewX(30deg) scale(1);
+}
+/* line 262, ../sass/style.scss */
+.petal:nth-child(3) {
+  animation: ani3 1000s ease-in-out infinite;
+  animation-delay: 166.66667s;
+  transform: translateY(2.11603em) translateX(1.71132em) rotate(30deg) skewX(30deg) scale(1);
+}
+/* line 262, ../sass/style.scss */
+.petal:nth-child(4) {
+  animation: ani4 1000s ease-in-out infinite;
+  animation-delay: 250s;
+  transform: translateY(2.25em) translateX(1.21132em) rotate(60deg) skewX(30deg) scale(1);
+}
+/* line 262, ../sass/style.scss */
+.petal:nth-child(5) {
+  animation: ani5 1000s ease-in-out infinite;
+  animation-delay: 333.33333s;
+  transform: translateY(2.11603em) translateX(0.71132em) rotate(90deg) skewX(30deg) scale(1);
+}
+/* line 262, ../sass/style.scss */
+.petal:nth-child(6) {
+  animation: ani6 1000s ease-in-out infinite;
+  animation-delay: 416.66667s;
+  transform: translateY(1.75em) translateX(0.3453em) rotate(120deg) skewX(30deg) scale(1);
+}
+/* line 262, ../sass/style.scss */
+.petal:nth-child(7) {
+  animation: ani7 1000s ease-in-out infinite;
+  animation-delay: 500s;
+  transform: translateY(1.25em) translateX(0.21132em) rotate(150deg) skewX(30deg) scale(1);
+}
+/* line 262, ../sass/style.scss */
+.petal:nth-child(8) {
+  animation: ani8 1000s ease-in-out infinite;
+  animation-delay: 583.33333s;
+  transform: translateY(0.75em) translateX(0.3453em) rotate(180deg) skewX(30deg) scale(1);
+}
+/* line 262, ../sass/style.scss */
+.petal:nth-child(9) {
+  animation: ani9 1000s ease-in-out infinite;
+  animation-delay: 666.66667s;
+  transform: translateY(0.38397em) translateX(0.71132em) rotate(210deg) skewX(30deg) scale(1);
+}
+/* line 262, ../sass/style.scss */
+.petal:nth-child(10) {
+  animation: ani10 1000s ease-in-out infinite;
+  animation-delay: 750s;
+  transform: translateY(0.25em) translateX(1.21132em) rotate(240deg) skewX(30deg) scale(1);
+}
+/* line 262, ../sass/style.scss */
+.petal:nth-child(11) {
+  animation: ani11 1000s ease-in-out infinite;
+  animation-delay: 833.33333s;
+  transform: translateY(0.38397em) translateX(1.71132em) rotate(270deg) skewX(30deg) scale(1);
+}
+/* line 262, ../sass/style.scss */
+.petal:nth-child(12) {
+  animation: ani12 1000s ease-in-out infinite;
+  animation-delay: 916.66667s;
+  transform: translateY(0.75em) translateX(2.07735em) rotate(300deg) skewX(30deg) scale(1);
+}
+
+@keyframes ani1 {
+  0% {
+    transform: translateY(1.25em) translateX(2.21132em) rotate(-30deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(1.25em) translateX(2.28455em) rotate(-30deg) skewX(30deg) scale(1.14645);
+  }
+  100% {
+    transform: translateY(1.25em) translateX(2.21132em) rotate(-30deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani2 {
+  0% {
+    transform: translateY(1.75em) translateX(2.07735em) rotate(0deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(1.78661em) translateX(2.14076em) rotate(0deg) skewX(30deg) scale(1.14645);
+  }
+  100% {
+    transform: translateY(1.75em) translateX(2.07735em) rotate(0deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani3 {
+  0% {
+    transform: translateY(2.11603em) translateX(1.71132em) rotate(30deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(2.17944em) translateX(1.74794em) rotate(30deg) skewX(30deg) scale(1.14645);
+  }
+  100% {
+    transform: translateY(2.11603em) translateX(1.71132em) rotate(30deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani4 {
+  0% {
+    transform: translateY(2.25em) translateX(1.21132em) rotate(60deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(2.32322em) translateX(1.21132em) rotate(60deg) skewX(30deg) scale(1.14645);
+  }
+  100% {
+    transform: translateY(2.25em) translateX(1.21132em) rotate(60deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani5 {
+  0% {
+    transform: translateY(2.11603em) translateX(0.71132em) rotate(90deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(2.17944em) translateX(0.67471em) rotate(90deg) skewX(30deg) scale(1.14645);
+  }
+  100% {
+    transform: translateY(2.11603em) translateX(0.71132em) rotate(90deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani6 {
+  0% {
+    transform: translateY(1.75em) translateX(0.3453em) rotate(120deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(1.78661em) translateX(0.28189em) rotate(120deg) skewX(30deg) scale(1.14645);
+  }
+  100% {
+    transform: translateY(1.75em) translateX(0.3453em) rotate(120deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani7 {
+  0% {
+    transform: translateY(1.25em) translateX(0.21132em) rotate(150deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(1.25em) translateX(0.1381em) rotate(150deg) skewX(30deg) scale(1.14645);
+  }
+  100% {
+    transform: translateY(1.25em) translateX(0.21132em) rotate(150deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani8 {
+  0% {
+    transform: translateY(0.75em) translateX(0.3453em) rotate(180deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(0.71339em) translateX(0.28189em) rotate(180deg) skewX(30deg) scale(1.14645);
+  }
+  100% {
+    transform: translateY(0.75em) translateX(0.3453em) rotate(180deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani9 {
+  0% {
+    transform: translateY(0.38397em) translateX(0.71132em) rotate(210deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(0.32056em) translateX(0.67471em) rotate(210deg) skewX(30deg) scale(1.14645);
+  }
+  100% {
+    transform: translateY(0.38397em) translateX(0.71132em) rotate(210deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani10 {
+  0% {
+    transform: translateY(0.25em) translateX(1.21132em) rotate(240deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(0.17678em) translateX(1.21132em) rotate(240deg) skewX(30deg) scale(1.14645);
+  }
+  100% {
+    transform: translateY(0.25em) translateX(1.21132em) rotate(240deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani11 {
+  0% {
+    transform: translateY(0.38397em) translateX(1.71132em) rotate(270deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(0.32056em) translateX(1.74794em) rotate(270deg) skewX(30deg) scale(1.14645);
+  }
+  100% {
+    transform: translateY(0.38397em) translateX(1.71132em) rotate(270deg) skewX(30deg) scale(1);
+  }
+}
+@keyframes ani12 {
+  0% {
+    transform: translateY(0.75em) translateX(2.07735em) rotate(300deg) skewX(30deg) scale(1);
+  }
+  50% {
+    transform: translateY(0.71339em) translateX(2.14076em) rotate(300deg) skewX(30deg) scale(1.14645);
+  }
+  100% {
+    transform: translateY(0.75em) translateX(2.07735em) rotate(300deg) skewX(30deg) scale(1);
+  }
+}

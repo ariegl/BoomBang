@@ -1,0 +1,309 @@
+@import "compass/css3";
+
+@font-face {
+    font-family: "vagrounded";
+    src: url("../fonts/VAG Rounded Regular.ttf");
+}
+
+body{
+    background:black;
+    font-family:'vagrounded';
+}
+
+main{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.container{
+    width:900px;
+    height:640px;
+    background-color:black;
+    background-image:url("../img/beluga.png");
+    background-size:cover;
+}
+
+.container-ficha{
+    width:220px;
+    height:330px;
+    margin-top:10px;
+    margin-right:10px;
+    background:#ffcc01;
+    border-radius:8px;
+}
+
+.container-ficha-header{
+    width:100%;
+    height:60px;
+}
+
+.container-ficha-main{
+    width:100%;
+    height:120px;
+}
+
+.container-ficha-actions{
+    width:100%;
+    height:150px;
+    background:pink;
+}
+
+.title-ficha{
+    width:85%;
+    color:#fff;
+    font-weight:bold;
+    font-size:28px;
+    background:#f89200;
+    padding:5px 10px;
+    border-radius:8px;
+    text-decoration:none;
+    cursor:default;
+}
+
+.txtDefault{
+    text-decoration:none;
+    cursor:default;
+}
+
+.container-ficha-main-cloud{
+    width:50%;
+    height:100%;
+}
+
+.container-ficha-main-character{
+    width:50%;
+    height:100%;
+}
+
+.container-picture{
+    width:94px;
+    height:94px;
+    border-radius:360px;
+    background: rgb(255,234,117);
+    background: radial-gradient(circle, rgba(255,234,117,1) 46%, rgba(254,188,1,1) 60%, rgba(242,130,0,1) 75%);
+}
+
+.container-cloud{
+    width:90%;
+    height:60%;
+    background:white;
+    margin:3px 6px 3px 6px;
+    border-radius:5px;
+}
+
+.txtCloud{
+    padding:8px 4px;
+    font-family: 'vagrounded';
+    font-size:11px;
+    font-weight:bold;
+    color:#007eff;
+}
+
+.container-age{
+    width:90%;
+    height:40%;
+}
+
+.img-ficha{
+    max-height:90%;
+}
+
+.txtPetalo{
+    font-weight:bold;
+    font-size:10px;
+    color:black;
+}
+
+.container-ficha-actions-header{
+  width:100%;
+  height:23%;
+  background:white;
+}
+
+.container-ficha-actions-body{
+  width:100%;
+  height:77%;
+  background:lime;
+}
+
+/*PETALOS EDAD PERSONAJE*/
+$w: 3em;
+$h: $w;
+$body-col: #bbb;
+$core-col: radial-gradient(ellipse at center, rgba(247,189,0,1) 0%,rgba(247,189,0,1) 52%,rgba(247,152,0,1) 67%,rgba(247,152,0,1) 100%);
+$petal-col: linear-gradient(135deg, rgb(255, 255, 255) 0%,rgb(255, 255, 255) 75%,rgb(255, 255, 255) 100%);
+$petal-border-col: rgba(255,255,255,0.25);
+$petal-bt: 2px;
+
+$cw: $w / 3;
+$ch: $cw;
+
+$r: $cw / 2;
+
+/* calculate the diagonal */
+$old-d: $w / 3;
+$DB: $old-d / 2;
+$s: sqrt(2) *  $DB;
+$CB: $s / 2 * (sqrt(2) - 1);
+$d: $old-d + $CB;
+$off: $old-d + $CB / 2;
+
+$sf: $d / $old-d;
+
+$d: $old-d;
+$off: $old-d;
+$off-ani: $off + $CB / 2;
+
+/* consider equilateral triangle*/
+$alpha: 30deg;
+$ph: $d / sqrt(4/3 + 4/sqrt(3)*tan($alpha) + 1 + pow(tan($alpha), 2));
+$pw: 2 / sqrt(3) * $ph;
+
+/*number of petals */
+$np: 12;
+$angle-incr: 360deg / $np;
+
+$anim-time: 1000s;
+
+body {
+  background: $body-col;
+}
+
+.container-flower {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  position: relative;
+  width: $w;
+  height: $h;
+  border-radius: 0%;
+  margin: 0 auto;
+}
+
+.core {
+  position: absolute;
+  top: ($h - $ch) / 2;
+  left: ($w - $cw) / 2;
+  width: $cw;
+  height: $ch;
+  background: $core-col;
+  border-radius: 50%;
+  cursor: default;
+  overflow: hidden;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 1;
+  
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.petal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $w;
+  height: $h;
+}
+
+@mixin transformation($tY, $tX, $r, $sk, $sc) {
+  transform:
+    translateY($tY)
+    translateX($tX)
+    rotate($r)
+    skewX($sk)
+    scale($sc);
+}
+
+.petal {
+  position: absolute;
+  width: $pw;
+  height: $ph;
+  background: $petal-col;
+  border-radius: 0 50% 50% 50%;
+  box-shadow: -2px -2px 20px rgba(255,255,255,0.5) inset,
+    0px 0px 2px rgba(0,0,0,0.5);
+  
+  box-sizing: border-box;
+  cursor: default;
+  overflow: hidden;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 1;
+  
+  &:hover {
+    opacity: 1;
+  }
+  
+  /*&:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $petal-col;
+    box-shadow: -2px -2px 20px rgba(255,255,255,0.5) inset;
+    
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    
+    
+    &:hover {
+      opacity: 0.0;
+    }
+  }*/
+  
+
+    
+  @for $i from 1 through $np {
+    &:nth-child(#{$i}) {
+      animation: ani#{$i} $anim-time ease-in-out infinite;
+      animation-delay: ($i - 1) * $anim-time / $np;
+      @include transformation(
+        ($h - $ph) / 2 + $off * sin(($i - 1) * $angle-incr),
+        ($w - $pw) / 2 + $off * cos(($i - 1) * $angle-incr),
+        -$alpha + ($i - 1) * $angle-incr,
+        $alpha,
+        1
+      );
+    }
+  }
+}
+
+
+@for $i from 1 through $np {
+  @keyframes ani#{$i} {
+    0% {
+      @include transformation(
+        ($h - $ph) / 2 + $off * sin(($i - 1) * $angle-incr),
+        ($w - $pw) / 2 + $off * cos(($i - 1) * $angle-incr),
+        -$alpha + ($i - 1) * $angle-incr,
+        $alpha,
+        1
+      );
+    }
+
+    50% {
+      @include transformation(
+        ($h - $ph) / 2 + $off-ani * sin(($i - 1) * $angle-incr),
+        ($w - $pw) / 2 + $off-ani * cos(($i - 1) * $angle-incr),
+        -$alpha + ($i - 1) * $angle-incr,
+        $alpha,
+        $sf
+      );
+    }
+
+    100% {
+      @include transformation(
+        ($h - $ph) / 2 + $off * sin(($i - 1) * $angle-incr),
+        ($w - $pw) / 2 + $off * cos(($i - 1) * $angle-incr),
+        -$alpha + ($i - 1) * $angle-incr,
+        $alpha,
+        1
+      );
+    }
+  }
+}

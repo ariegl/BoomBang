@@ -1,0 +1,39 @@
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+main{
+    display:flex;
+    align-items:center;
+    justify-content:center;   
+}
+
+.container{
+    display:flex;
+    justify-content:flex-end;
+}
+
+.container-ficha-main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-ficha-header,.container-ficha-main-character,.container-ficha-main-cloud,.container-picture,.core{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container-ficha-main-cloud{
+    justify-content: flex-start;
+    flex-direction:column;
+}
+
+.container-cloud{
+    display:flex;
+    align-items:flex-start;
+    justify-content:flex-start;
+}

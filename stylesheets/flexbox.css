@@ -1,0 +1,46 @@
+/* line 1, ../sass/flexbox.scss */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 7, ../sass/flexbox.scss */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 13, ../sass/flexbox.scss */
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* line 18, ../sass/flexbox.scss */
+.container-ficha-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 24, ../sass/flexbox.scss */
+.container-ficha-header, .container-ficha-main-character, .container-ficha-main-cloud, .container-picture, .core {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 30, ../sass/flexbox.scss */
+.container-ficha-main-cloud {
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+/* line 35, ../sass/flexbox.scss */
+.container-cloud {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}

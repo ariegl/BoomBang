@@ -21,7 +21,7 @@ main{
     align-items: center;
 }
 
-.container-ficha-header,.container-ficha-main-character,.container-ficha-main-cloud,.container-picture,.core{
+.container-ficha-header,.container-ficha-main-character,.container-ficha-main-cloud,.container-picture,.core,.actions-body-section-emojis,.icon-header{
     display:flex;
     justify-content:center;
     align-items:center;
@@ -36,4 +36,31 @@ main{
     display:flex;
     align-items:flex-start;
     justify-content:flex-start;
+}
+
+.container-ficha-actions{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+.container-ficha-actions-body{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-around;
+}
+
+.container-ficha-actions-header{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:flex-end;
+}
+
+.first-icon-header{
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
 }

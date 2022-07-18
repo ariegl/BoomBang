@@ -46,7 +46,6 @@ main{
 .container-ficha-actions{
     width:100%;
     height:150px;
-    background:pink;
 }
 
 .title-ficha{
@@ -116,15 +115,56 @@ main{
 }
 
 .container-ficha-actions-header{
-  width:100%;
-  height:23%;
+  width:90%;
+  height:20%;
+}
+
+.icon-header{
+  width:18%;
+  height:80%;
+  background:#003c6b;
+  margin-left:6px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.first-icon-header{
+  margin-left:0px;
+  width:28%;
+  height:100%;
+  border-top-right-radius: 11px;
   background:white;
 }
 
+.img-first-icons-header{
+  width:25px;
+  height:auto;
+  margin-left:5px;
+}
+
+.img-icons-header{
+  width:15px;
+}
+
 .container-ficha-actions-body{
-  width:100%;
-  height:77%;
-  background:lime;
+  width:90%;
+  height:73%;
+  background:white;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  border-top-right-radius: 12px;
+}
+
+.actions-body-section-emojis{
+  width:20%;
+  height:40px;
+  background:white;
+  margin:0px 2px 0px 2px;
+}
+
+.imgEmojis{
+  width:80%;
+  cursor:pointer;
 }
 
 /*PETALOS EDAD PERSONAJE*/
